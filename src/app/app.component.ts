@@ -17,12 +17,12 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    let data = this.items$.push({
-      name: 'tony',
-      descript: 'Hello World'
-    });
+    // let data = this.items$.push({
+    //   name: 'tony',
+    //   descript: 'Hello World'
+    // });
 
-    let key = data.key;
+    // let key = data.key;
   }
 
 }

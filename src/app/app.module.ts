@@ -8,11 +8,11 @@ import { AngularFireModule } from 'angularfire2';
 
 
   var config = {
-    apiKey: "AIzaSyBREZj86wtKfbHpM2pC9wPouKxa9bB8a0U",
-    authDomain: "fir-1-ab77c.firebaseapp.com",
-    databaseURL: "https://fir-1-ab77c.firebaseio.com",
-    storageBucket: "fir-1-ab77c.appspot.com",
-    messagingSenderId: "353613024655"
+    apiKey: "AIzaSyBmaW_vl8iS6dunx2UhhCdvoDmtVRatqW8",
+    authDomain: "tonyfair-3b314.firebaseapp.com",
+    databaseURL: "https://tonyfair-3b314.firebaseio.com",
+    storageBucket: "tonyfair-3b314.appspot.com",
+    messagingSenderId: "134616636706"
   };
 
 @NgModule({
