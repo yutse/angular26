@@ -1,56 +1,53 @@
 <!--<h1>{{title}}</h1>-->
-<div>
-<md-radio-group class="example-radio-group" [(ngModel)]="favoriteSeason" >
-  <md-radio-button class="example-radio-button"  *ngFor="let season of typeArr" [value]="season">
-    {{season}}
-  </md-radio-button>
-</md-radio-group>
-</div>
-<div style="float:left">
-<ul style="list-style-type: none;padding-left:0px">
-<li>
-  <md-card class="mdCard">
-    <md-card-content>
-      時間\日期
-    </md-card-content>
-  </md-card>
-</li>
-<li *ngFor="let item of timearr; let jheader= index">
-  <md-card class="mdCard">
-    <md-card-content>
-      {{item}}
-    </md-card-content>
-  </md-card>
-</li>
-</ul>
 
-</div>
+<md-sidenav-container class="example-sidenav-fab-container">
+  <md-toolbar color="primary">
+    <md-icon>menu</md-icon>
 
-<div style="display: inline-block">
-<ul style="list-style-type: none;padding-left:0px">
-<li *ngFor="let item of [1,2,3,4,5,6,7]; let jheader= index" style='float:left;'>
-<md-card class="mdCard mdCard1">
-  <md-card-content>
-    {{WeekToWord(jheader)}}
-  </md-card-content>
-</md-card>
-</li>
-</ul>
+    <span>Custom Toolbar</span>
 
-<div style="clear:left">
-<ul *ngFor="let item of [1,2,3,4,5,6,7]; let J= index" style="list-style-type: none;float: left;padding:1px;">
-<li *ngFor="let item of timearr; let I = index" (click)="clickI = I; clickJ = J;" >
-  <md-card class="mdCard mdCard1">
-    <md-card-content [ngStyle]="{
-          'color': selectCheck(I,J,clickI,clickJ)
-          }">
-      <p>
-        {{I}}-{{J}}
-      </p>
-    </md-card-content>
-  </md-card>
+    <md-toolbar-row>
+      <span>Second Line</span>
+      <span class="example-spacer"></span>
+      <md-icon class="example-icon">verified_user</md-icon>
+    </md-toolbar-row>
 
-</li>
-</ul>
-</div>
-</div>
+    <md-toolbar-row>
+      <span>Third Line</span>
+      <span class="example-spacer"></span>
+      <md-icon class="example-icon">favorite</md-icon>
+      <md-icon class="example-icon">delete</md-icon>
+    </md-toolbar-row>
+  </md-toolbar>
+  <md-sidenav #sidenav mode="side" opened="true">
+    <button md-mini-fab class="example-fab" (click)="sidenav.toggle()">
+      <md-icon>add</md-icon>
+    </button>
+
+
+    <div class="example-scrolling-content">
+      Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce vel in pellentesque. Nisl rutrum
+      etiam morbi consectetuer tempor magna, aenean nullam nunc id, neque vivamus interdum sociis nulla scelerisque sem,
+      dolor id wisi turpis magna aliquam magna. Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor
+      vel urna occaecat cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at, ligula ipsum dui sollicitudin,
+      quis nisl massa viverra ligula, mauris fermentum orci arcu enim fringilla. Arcu erat nulla in aenean lacinia ullamcorper,
+      urna ante nam et sagittis, tristique vehicula nibh ipsum vivamus, proin proin. Porta commodo nibh quis libero amet.
+      Taciti dui, sapien consectetuer.
+    </div>
+  </md-sidenav>
+  <button md-mini-fab class="example-fab" (click)="sidenav.toggle()">
+    <md-icon>add</md-icon>
+  </button>
+  <div class="example-scrolling-content">
+    Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce vel in pellentesque. Nisl rutrum
+    etiam morbi consectetuer tempor magna, aenean nullam nunc id, neque vivamus interdum sociis nulla scelerisque sem, dolor
+    id wisi turpis magna aliquam magna. Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor vel urna
+    occaecat cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at, ligula ipsum dui sollicitudin, quis nisl
+    massa viverra ligula, mauris fermentum orci arcu enim fringilla. Arcu erat nulla in aenean lacinia ullamcorper, urna
+    ante nam et sagittis, tristique vehicula nibh ipsum vivamus, proin proin. Porta commodo nibh quis libero amet. Taciti
+    dui, sapien consectetuer.
+  </div>
+</md-sidenav-container>
+
+
+<app-sub1></app-sub1>

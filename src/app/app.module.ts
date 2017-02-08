@@ -9,6 +9,7 @@ import { AngularFireModule } from 'angularfire2';
 import { MaterialModule } from '@angular/material';
 import { MdRadioModule } from '@angular/material/radio';
 import 'hammerjs';
+import { Sub1Component } from './sub1/sub1.component';
 
 
   const config = {
@@ -21,7 +22,8 @@ import 'hammerjs';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    Sub1Component
   ],
   imports: [
     BrowserModule,
