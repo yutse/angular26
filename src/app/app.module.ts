@@ -10,6 +10,8 @@ import { MaterialModule } from '@angular/material';
 import { MdRadioModule } from '@angular/material/radio';
 import 'hammerjs';
 import { Sub1Component } from './sub1/sub1.component';
+import { HomeComponent } from './home/home.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
   const config = {
@@ -23,14 +25,16 @@ import { Sub1Component } from './sub1/sub1.component';
 @NgModule({
   declarations: [
     AppComponent,
-    Sub1Component
+    Sub1Component,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     AngularFireModule.initializeApp(config),
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
+    AppRoutingModule
     // DatepickerModule.forRoot()
   ],
   providers: [],

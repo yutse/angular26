@@ -1,12 +1,12 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
-import { Sub1Component} from './sub1/sub1.component';
+// import { Sub1Component} from './sub1/sub1.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [Sub1Component],
+  // providers: [Sub1Component],
   encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent implements OnInit {

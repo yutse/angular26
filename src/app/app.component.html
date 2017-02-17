@@ -1,6 +1,4 @@
-<!--<h1>{{title}}</h1>-->
-
-<md-sidenav-container class="example-sidenav-fab-container">
+<!--<md-sidenav-container class="example-sidenav-fab-container">
   <md-toolbar color="primary">
     <md-icon>menu</md-icon>
 
@@ -47,7 +45,15 @@
     ante nam et sagittis, tristique vehicula nibh ipsum vivamus, proin proin. Porta commodo nibh quis libero amet. Taciti
     dui, sapien consectetuer.
   </div>
-</md-sidenav-container>
+</md-sidenav-container>-->
+<!--<a [routerLink]="['/home']">首頁</a>
+<a [routerLink]="['/sub1']">預約功能</a>-->
+<nav>
+  <a routerLink="/home" routerLinkActive="active">首頁</a>
+  <a routerLink="/sub1" routerLinkActive="active">預約功能</a>
+</nav>
 
 
-<app-sub1></app-sub1>
+
+<router-outlet></router-outlet>
+<!--<app-sub1></app-sub1>-->
