@@ -48,12 +48,26 @@
 </md-sidenav-container>-->
 <!--<a [routerLink]="['/home']">首頁</a>
 <a [routerLink]="['/sub1']">預約功能</a>-->
-<nav>
-  <a routerLink="/home" routerLinkActive="active">首頁</a>
-  <a routerLink="/sub1" routerLinkActive="active">預約功能</a>
-</nav>
 
-
+  <div class="jumbotron">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs|pills" id="navId">
+      <li class="nav-item">
+        <a routerLink="/home" class="nav-link" routerLinkActive="active">首頁</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/sub1" class="nav-link" routerLinkActive="active">預約功能</a>
+      </li>
+      <!--<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#tab2Id">Action</a>
+          <a class="dropdown-item" href="#tab3Id">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#tab4Id">Action</a>
+        </div>
+      </li>-->
+    </ul>
+  </div>
 
 <router-outlet></router-outlet>
-<!--<app-sub1></app-sub1>-->
