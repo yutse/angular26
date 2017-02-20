@@ -1,73 +1,21 @@
-<!--<md-sidenav-container class="example-sidenav-fab-container">
-  <md-toolbar color="primary">
-    <md-icon>menu</md-icon>
-
-    <span>Custom Toolbar</span>
-
-    <md-toolbar-row>
-      <span>Second Line</span>
-      <span class="example-spacer"></span>
-      <md-icon class="example-icon">verified_user</md-icon>
-    </md-toolbar-row>
-
-    <md-toolbar-row>
-      <span>Third Line</span>
-      <span class="example-spacer"></span>
-      <md-icon class="example-icon">favorite</md-icon>
-      <md-icon class="example-icon">delete</md-icon>
-    </md-toolbar-row>
-  </md-toolbar>
-  <md-sidenav #sidenav mode="side" opened="true">
-    <button md-mini-fab class="example-fab" (click)="sidenav.toggle()">
-      <md-icon>add</md-icon>
-    </button>
-
-
-    <div class="example-scrolling-content">
-      Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce vel in pellentesque. Nisl rutrum
-      etiam morbi consectetuer tempor magna, aenean nullam nunc id, neque vivamus interdum sociis nulla scelerisque sem,
-      dolor id wisi turpis magna aliquam magna. Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor
-      vel urna occaecat cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at, ligula ipsum dui sollicitudin,
-      quis nisl massa viverra ligula, mauris fermentum orci arcu enim fringilla. Arcu erat nulla in aenean lacinia ullamcorper,
-      urna ante nam et sagittis, tristique vehicula nibh ipsum vivamus, proin proin. Porta commodo nibh quis libero amet.
-      Taciti dui, sapien consectetuer.
-    </div>
-  </md-sidenav>
-  <button md-mini-fab class="example-fab" (click)="sidenav.toggle()">
-    <md-icon>add</md-icon>
-  </button>
-  <div class="example-scrolling-content">
-    Lorem ipsum dolor sit amet, pede a libero aenean phasellus, lectus metus sint ut risus, fusce vel in pellentesque. Nisl rutrum
-    etiam morbi consectetuer tempor magna, aenean nullam nunc id, neque vivamus interdum sociis nulla scelerisque sem, dolor
-    id wisi turpis magna aliquam magna. Risus accumsan hac eget etiam donec sed, senectus erat mattis quam, tempor vel urna
-    occaecat cras, metus urna augue nec at. Et morbi amet dui praesent, nec eu at, ligula ipsum dui sollicitudin, quis nisl
-    massa viverra ligula, mauris fermentum orci arcu enim fringilla. Arcu erat nulla in aenean lacinia ullamcorper, urna
-    ante nam et sagittis, tristique vehicula nibh ipsum vivamus, proin proin. Porta commodo nibh quis libero amet. Taciti
-    dui, sapien consectetuer.
-  </div>
-</md-sidenav-container>-->
-<!--<a [routerLink]="['/home']">首頁</a>
-<a [routerLink]="['/sub1']">預約功能</a>-->
-
-  <div class="jumbotron">
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs|pills" id="navId">
-      <li class="nav-item">
-        <a routerLink="/home" class="nav-link" routerLinkActive="active">首頁</a>
+<!-- Nav tabs -->
+<nav class="nav navbar-inverse bg-primary">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav" id="navId">
+      <li class="active" routerLinkActive="active">
+        <a routerLink="/home" class="nav-link">
+          <span class="glyphicon glyphicon-home" aria-hidden="true"></span> 首頁
+        </a>
       </li>
-      <li class="nav-item">
-        <a routerLink="/sub1" class="nav-link" routerLinkActive="active">預約功能</a>
+      <li class="" routerLinkActive="active">
+        <a routerLink="/sub1" class="nav-link">預約功能</a>
       </li>
-      <!--<li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#tab2Id">Action</a>
-          <a class="dropdown-item" href="#tab3Id">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#tab4Id">Action</a>
-        </div>
-      </li>-->
+
     </ul>
   </div>
+</nav>
+<div class="jumbotron">
 
-<router-outlet></router-outlet>
+
+  <router-outlet></router-outlet>
+</div>
