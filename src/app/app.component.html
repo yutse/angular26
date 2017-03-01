@@ -1,24 +1,41 @@
 <!-- Nav tabs -->
-<nav class="nav navbar navbar-toggleable-md   fixed-top navbar-inverse bg-primary">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-toggleable-md   fixed-top navbar-inverse bg-primary">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-  </button>
-   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav" id="navId">
-      <li class="nav-item active" routerLinkActive="active">
-        <a routerLink="/home" class="nav-link">
-          <i class="fa fa-home" aria-hidden="true"></i> 首頁
-        </a>
-      </li>
-      <li class="nav-item" routerLinkActive="active">
-        <a routerLink="/sub1" class="nav-link">預約功能</a>
-      </li>
-
-    </ul>
-     </div>
+    </button>
+    <a class="navbar-brand" routerLink="/home">
+      <i class="fa fa-scissors fa-lg fa-spin" aria-hidden="true"></i>
+      <!--<i class="fa fa-scissors fa-lg" aria-hidden="true"></i>-->
+      <b class="ml-2">TONY</b>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav" id="navId">
+        <li class="nav-item active" routerLinkActive="active">
+          <a routerLink="/home" class="nav-link">
+            <i class="fa fa-home" aria-hidden="true"></i> 首頁
+          </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a routerLink="/sub1" class="nav-link">預約功能</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown Link
+            </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">AAA</a>
+            <a class="dropdown-item" href="#">BBB</a>
+            <a class="dropdown-item" href="#">CCC</a>
+          </div>
+        </li>
+      </ul>
+    </div>
 </nav>
 <div class="jumbotron">
 
 
   <router-outlet></router-outlet>
+
+
 </div>
