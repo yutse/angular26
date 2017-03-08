@@ -1,4 +1,6 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation,
+   trigger, style, state, transition, animate // 動畫物件
+   } from '@angular/core';
 import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
 // import { Sub1Component} from './sub1/sub1.component';
 
@@ -7,17 +9,20 @@ import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from 'a
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   // providers: [Sub1Component],
+  // Angular2 Component styles 有三種模式
+  // 1. ViewEncapsulation.None: 適用於全部頁面 (No Shadow DOM)
+  // 2. ViewEncapsulation.Native: 僅套用於 Shadow DOM 自己本身
+  // 3. ViewEncapsulation.Emulated: 預設行為。會自動將每個 component 給予一個
   encapsulation: ViewEncapsulation.None,
+  // https://www.youtube.com/watch?v=IpfP-eR0amM
+  animations:[
+    // trigger('ative',[state()] )
+  ]
 })
 export class AppComponent implements OnInit {
   title = 'Tony 美髮事業網站(預約功能)';
   items$: FirebaseListObservable<any[]>;
   item$: FirebaseObjectObservable<any>;
-  // public timeLength: number = 17;
-  // public timearr: string[] = [];
-  // public favoriteSeason: string = '染髮(1.5H)';
-  // public typeArr: string[] = ['剪髮(1H)', '染髮(1.5H)', '燙髮(2H)'];
-
 
   constructor(af: AngularFire) {
     this.items$ = af.database.list('tonyitems');
@@ -25,61 +30,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    // let data = this.items$.push({
-    //   name: 'tony',
-    //   descript: 'Hello World'
-    // });
 
-    // let key = data.key;
-    // this.timearr = this.YCoor();
   }
-
-  /**
-   * 星期轉換
-   */
-  public WeekToWord(J: number): string {
-    const str = '星期';
-    const word = ['一', '二', '三', '四', '五', '六', '天'];
-    return str + word[J];
-  }
-
-  /**
-   * 時間軸
-   */
-  // public YCoor(): string[] {
-  //   let arr: string[] = [];
-  //   for (let i = 0; i < this.timeLength; i++) {
-  //     let date = new Date(2017, 0, 1, 8, 30 * i);
-  //     let date1 = new Date(2017, 0, 1, 8, 30 * (i + 1));
-  //     arr.push(`${date.getHours()}點${date.getMinutes()}分 至 ${date1.getHours()}點${date1.getMinutes()}分`);
-  //   }
-  //   return arr;
-  // }
-
-  /**
-   * selectCheck
-   */
-  // public selectCheck(I: number, J: number, clickI: number, clickJ: number): string {
-  //   //  ['剪髮(1H)', '染髮(1.5H)', '燙髮(2H)']
-  //   let index = 0;
-  //   switch (this.favoriteSeason) {
-  //     case '剪髮(1H)':
-  //       index = 2;
-  //       break;
-  //     case '染髮(1.5H)':
-  //       index = 3;
-  //       break;
-  //     case '燙髮(2H)':
-  //       index = 4;
-  //       break;
-  //   }
-  //   let check = I === clickI;
-  //   for (let i = 1; i < index; i++) {
-  //     check = check || I === (clickI + i);
-  //   }
-  //   return check && J === clickJ ? 'red' : 'black';
-  // }
-
-
 
 }
