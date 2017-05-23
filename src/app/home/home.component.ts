@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
+
+declare var $: any;
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ngZone: NgZone) { }
 
   ngOnInit() {
+    this.ngZone.runOutsideAngular(() => {
+      console.log('123');
+      const dom = $('.fadeOut');
+      dom.owlCarousel({
+        items: 1,
+        animateOut: 'fadeOut',
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 1000,
+        autoplayHoverPause: false
+      });
+      dom.trigger('play.owl.autoplay', [1000]);
+    });
   }
 
 }

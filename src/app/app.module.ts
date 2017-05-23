@@ -6,9 +6,9 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
 // import { DatepickerModule } from 'ng2-bootstrap';
-import { MaterialModule } from '@angular/material';
-import { MdRadioModule } from '@angular/material/radio';
-import 'hammerjs';
+// import { MaterialModule } from '@angular/material';
+// import { MdRadioModule } from '@angular/material/radio';
+// import 'hammerjs';
 import { Sub1Component } from './sub1/sub1.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -33,7 +33,7 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     HttpModule,
     AngularFireModule.initializeApp(config),
-    MaterialModule.forRoot(),
+    // MaterialModule.forRoot(),
     AppRoutingModule
     // DatepickerModule.forRoot()
   ],
