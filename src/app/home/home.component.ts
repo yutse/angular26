@@ -1,6 +1,7 @@
 import { Component, OnInit, NgZone } from '@angular/core';
 
 declare var $: any;
+// declare var Autoplay: any;
 
 @Component({
   selector: 'app-home',
@@ -13,18 +14,17 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.ngZone.runOutsideAngular(() => {
-      console.log('123');
-      const dom = $('.fadeOut');
-      dom.owlCarousel({
-        items: 1,
-        animateOut: 'fadeOut',
-        loop: true,
-        margin: 10,
+      // console.log('123');
+      $('.fadeOut').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
         autoplay: true,
-        autoplayTimeout: 1000,
-        autoplayHoverPause: false
+        autoplaySpeed: 1500
       });
-      dom.trigger('play.owl.autoplay', [1000]);
+
     });
   }
 
