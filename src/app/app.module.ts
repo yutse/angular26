@@ -12,21 +12,27 @@ import { AngularFireModule } from 'angularfire2';
 import { Sub1Component } from './sub1/sub1.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
+import { IntroductionComponent } from './introduction/introduction.component';
+import { FooterComponent } from './footer/footer.component';
+import { IntroductionMenuComponent } from './introduction-menu/introduction-menu.component';
 
 
-  const config = {
-    apiKey: 'AIzaSyBmaW_vl8iS6dunx2UhhCdvoDmtVRatqW8',
-    authDomain: 'tonyfair-3b314.firebaseapp.com',
-    databaseURL: 'https://tonyfair-3b314.firebaseio.com',
-    storageBucket: 'tonyfair-3b314.appspot.com',
-    messagingSenderId: '134616636706'
-  };
+const config = {
+  apiKey: 'AIzaSyBmaW_vl8iS6dunx2UhhCdvoDmtVRatqW8',
+  authDomain: 'tonyfair-3b314.firebaseapp.com',
+  databaseURL: 'https://tonyfair-3b314.firebaseio.com',
+  storageBucket: 'tonyfair-3b314.appspot.com',
+  messagingSenderId: '134616636706'
+};
 
 @NgModule({
   declarations: [
     AppComponent,
     Sub1Component,
-    HomeComponent
+    HomeComponent,
+    IntroductionComponent,
+    FooterComponent,
+    IntroductionMenuComponent
   ],
   imports: [
     BrowserModule,
